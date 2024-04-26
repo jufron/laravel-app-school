@@ -6,8 +6,19 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "autoprefixer": "^10.4.19",
         "axios": "^1.6.4",
         "laravel-vite-plugin": "^1.0.0",
+        "postcss": "^8.4.38",
+        "prettier": "^3.2.5",
+        "prettier-plugin-tailwindcss": "^0.5.14",
+        "tailwindcss": "^3.4.3",
         "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "@alpinejs/persist": "^3.13.10",
+        "alpinejs": "^3.13.10",
+        "apexcharts": "^3.49.0",
+        "flatpickr": "^4.6.13"
     }
 }
