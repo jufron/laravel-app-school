@@ -16,9 +16,10 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
-        "@alpinejs/persist": "^3.13.10",
+        "@alpinejs/persist": "^3.12.0",
         "alpinejs": "^3.13.10",
         "apexcharts": "^3.49.0",
-        "flatpickr": "^4.6.13"
+        "flatpickr": "^4.6.13",
+        "jsvectormap": "^1.5.3"
     }
 }

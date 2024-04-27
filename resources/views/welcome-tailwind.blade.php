@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @vite('resources/css/app.css')
+  @vite(['resources/js/app.js'])
 </head>
 <body>
-  <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+		<div x-data="{ count: 0 }">
+			<button @click="count++">Add</button>
+			<span x-text="count">0</span>
+		</div>
 </body>
 </html>
