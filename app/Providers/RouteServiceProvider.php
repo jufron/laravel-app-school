@@ -2,6 +2,9 @@
 
 namespace App\Providers;
 
+use App\Models\SocialMedia;
+use App\Models\Testimonial;
+use App\Models\Telepon;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
@@ -17,13 +20,17 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    public const HOME = '/home';
+    public const HOME = '/dashboard';
 
     /**
      * Define your route model bindings, pattern filters, and other route configuration.
      */
     public function boot(): void
     {
+        Route::model('testimonial', Testimonial::class);
+        Route::model('socialMedia', SocialMedia::class);
+        Route::model('telepon', Telepon::class);
+
         RateLimiter::for('api', function (Request $request) {
             return Limit::perMinute(60)->by($request->user()?->id ?: $request->ip());
         });
@@ -35,6 +42,11 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            // super admin
+            Route::middleware('web', 'auth', 'verified')
+                 ->prefix('dashboard')
+                 ->group(base_path('routes/dashboard/superAdmin.php'));
         });
     }
 }

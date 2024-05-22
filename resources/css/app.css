@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-@import url('./satoshi.css');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 
 @layer base {
   body {
@@ -13,6 +12,7 @@
 }
 
 @layer components {
+
 }
 
 @layer utilities {
@@ -208,10 +208,10 @@ span.flatpickr-weekday,
   background-size: 20px;
 }
 .custom-input-date-1::-webkit-calendar-picker-indicator {
-  background-image: url(/public/images/icon/icon-calendar.svg);
+  background-image: url(../images/icon/icon-calendar.svg);
 }
 .custom-input-date-2::-webkit-calendar-picker-indicator {
-  background-image: url(/public/images/icon/icon-arrow-down.svg);
+  background-image: url(../images/icon/icon-arrow-down.svg);
 }
 
 [x-cloak] {
