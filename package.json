@@ -19,6 +19,8 @@
     },
     "dependencies": {
         "@alpinejs/persist": "^3.12.0",
+        "@ckeditor/ckeditor5-alignment": "^41.4.2",
+        "@ckeditor/ckeditor5-build-classic": "^41.4.2",
         "alpinejs": "^3.13.10",
         "apexcharts": "^3.49.0",
         "flatpickr": "^4.6.13",

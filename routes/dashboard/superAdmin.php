@@ -58,7 +58,11 @@ Route::prefix('telepon')->controller(TeleponController::class)->group( function 
 // * general
 Route::prefix('general')->controller(GeneralController::class)->group( function () {
     Route::get('/', 'index')->name('dashboard.general');
+    ROute::get('/edit', 'edit')->name('dashboard.general.edit');
     Route::post('/', 'update')->name('dashboard.general.update');
+    // todo upload image CKEDITOR upload and delete via ajax
+    Route::post('/upload', 'upload')->name('dashboard.general.upload.image');
+    Route::delete('/upload', 'destroy')->name('dashboard.general.destroy.image');
 });
 
 Route::get('visi-misi', function () {

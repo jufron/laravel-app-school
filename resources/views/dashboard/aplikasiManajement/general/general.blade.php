@@ -27,7 +27,7 @@
 
           <x-small.button.button-link
             className="inline-flex items-center justify-center rounded-md bg-blue-600 hover:bg-blue-700 px-8 py-3 text-center text-white hover:bg-opacity-90 lg:px-8 xl:px-10 transition duration-500"
-            urlHref="/home"
+            urlHref="{{ route('dashboard.general.edit') }}"
             label="Ubah data"
           />
 
